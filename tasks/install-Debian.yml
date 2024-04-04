@@ -1,0 +1,26 @@
+---
+
+- name: Avast | Importing PGP public key
+  ansible.builtin.apt_key:
+    url: https://repo.avcdn.net/linux-av/doc/avast-gpg-key.asc
+    state: present
+
+- name: Avast | Adding DEB Repository
+  ansible.builtin.apt_repository:
+    repo: "deb https://repo.avcdn.net/linux-av/deb {{ ansible_distribution | lower}}-{{ ansible_distribution_release | lower }} release"
+    state: present
+
+- name: Avast | Installing from DEB repository
+  ansible.builtin.apt:
+    name: avast
+    update_cache: yes
+    state: present
+
+- name: Avast | Installing license key
+  ansible.builtin.copy:
+    src: "{{ avast_license_file }}"
+    dest: /etc/avast/license.avastlic
+    owner: root
+    group: root
+  notify:
+    - restart avast daemon

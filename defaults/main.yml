@@ -1,0 +1,5 @@
+---
+# defaults file for ansible_role_avast_antivirus
+
+
+avast_license_file: "license.avastlic"

@@ -1,0 +1,7 @@
+---
+
+avast_packages:
+  avast
+  avast-ffs
+  avast-rest
+  avast-license

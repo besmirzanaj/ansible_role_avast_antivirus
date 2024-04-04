@@ -1,0 +1,43 @@
+---
+
+- name: Avast | Import OS facts
+  ansible.builtin.include:
+    file: "{{ ansible_os_family }}.yml"
+
+- name: Avast | Install the Avast Antivirus RPM GPG Key
+  ansible.builtin.rpm_key:
+    key: "https://repo.avcdn.net/linux-av/doc/avast-gpg-key.asc"
+    state: present
+
+- name: Avast | Install the Avast Antivirus RPM repository
+  ansible.builtin.yum_repository: 
+    name: Avast
+    description: Avast Antivirus YUM repo
+    file: avast
+    baseurl: https://repo.avcdn.net/linux-av/rpm/el$releasever/release/
+    gpgcheck: yes
+
+- name: Avast | Install the Avast Antivirus packages
+  ansible.builtin.package:
+    name: "{{ avast_packages }}"
+    state: present
+
+- name: Avast | Installing license key
+  ansible.builtin.copy:
+    src: "{{ avast_license_file }}"
+    dest: /etc/avast/license.avastlic
+    owner: "root"
+    group: "root"
+    mode: "0644"
+  notify: restart avast
+
+- name: Avast | Update the Avast Antivirus database for the first time
+  ansible.builtin.command:
+    cmd: "/usr/libexec/avast/vpsupdate"
+    changed_when: false
+
+- name: Avast | Configure the Avast Antivirus service
+  ansible.builtin.service:
+    name: avast
+    state: started
+    enabled: true

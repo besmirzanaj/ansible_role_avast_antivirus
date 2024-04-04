@@ -1,0 +1,31 @@
+galaxy_info:
+  author: "Besmir Zanaj"
+  description: Ansible role to install Avast Antivirus in Linux
+  # issue_tracker_url: http://example.com/issue/tracker
+
+  license: license (GPL-2.0-or-later, MIT, etc)
+
+  min_ansible_version: " "
+  platforms:
+    - name: EL
+      versions:
+        - "7"
+        - "8"
+        - "9"
+    - name: Debian
+      versions:
+        - "buster" # Debian 10
+        - "bullseye" # Debian 11
+        - "bookworm" # Debian 12
+    - name: Ubuntu
+      versions:
+      - "bionic" # Ubuntu 18.04 LTS (Bionic Beaver)
+      - "focal" # Ubuntu 20.04 LTS (Focal Fossa)
+      - "jammy" # Ubuntu 22.04 LTS (Jammy Jellyfish)
+
+  galaxy_tags: 
+    - antivirus
+    - avast
+
+dependencies: []
+

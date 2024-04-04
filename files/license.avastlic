@@ -1,0 +1,7 @@
+## YOUR AVAST LICENSE FILE.
+
+# To create it, run this on a linux host that has the "avast-license" package installed:
+
+$ avastlic -v -o ./license.avastlic -c <YOUR-LICENSE-OR-WALLET-KEY>
+$ sudo cp ./license.avastlic /etc/avast/license.avastlic
+
