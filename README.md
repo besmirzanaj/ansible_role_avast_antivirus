@@ -20,7 +20,7 @@ On a linux host (it could be your ansible control node) create a license file un
 $ avastlic -v -o ./license.avastlic -c <YOUR-LICENSE-OR-WALLET-KEY>
 ```
 
-Copy this file under `files` directory of this role. If this file is to be saved somewhere else, update the `avast_license_file` var accordingly with the new path.
+Copy the license.avastlic file into the `files` directory of this role and if this file is to be saved somewhere else, update the `avast_license_file` var accordingly with the new path.
 
 ## Role Variables
 
