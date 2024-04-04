@@ -1,5 +1,4 @@
 # asible_role_avast_antivirus
-=========
 
 This role is to install the avast antivirus for Linux. 
 
