@@ -1,6 +1,6 @@
 # ansible_role_avast_antivirus
 
-This role is to install the Avast Antivirus for Linux. 
+This role can be used to install the Avast Antivirus for Linux. 
 
 Official ocumentation for Avast Antivirus for Linux is located here - https://repo.avcdn.net/linux-av/doc/avast-techdoc.pdf
 
