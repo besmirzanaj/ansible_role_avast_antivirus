@@ -2,6 +2,6 @@
 
 avast_packages:
   avast
-  avast-ffs
+  avast-fss
   avast-rest
   avast-license

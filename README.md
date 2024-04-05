@@ -9,7 +9,11 @@ Official ocumentation for Avast Antivirus for Linux is located here - https://re
 
 ### OS
 
-A Debian or RHEL family systemd based Linux system.
+A Debian or RHEL family systemd based Linux system. 
+
+The role needs to be run with root permissions. Use `become: true` if using a normal user with sudo permissions.
+
+When using this role, please gather ansible facts first 
 
 ### License file
 
@@ -39,9 +43,10 @@ NA
 ```yaml
 
 - hosts: servers
-  become: yes
+  become: true
+  gather_facts: true
   roles:
-    - ansible_role_avast_antivirus
+    - besmirzanaj.ansible_role_avast_antivirus
 ```
 
 ## License

@@ -1,9 +1,5 @@
 ---
 
-- name: Avast | Import OS facts
-  ansible.builtin.include:
-    file: "{{ ansible_os_family }}.yml"
-
 - name: Avast | Install the Avast Antivirus RPM GPG Key
   ansible.builtin.rpm_key:
     key: "https://repo.avcdn.net/linux-av/doc/avast-gpg-key.asc"

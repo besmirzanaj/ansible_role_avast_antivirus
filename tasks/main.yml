@@ -6,6 +6,10 @@
     msg: "Please ensure that 'avast_license_file' is set in your host_vars or group_vars"
   when: avast_license_file is not defined
 
+- name: Import OS related variables
+  ansible.builtin.include_vars:
+    file: "{{ ansible_os_family }}.yml"
+
 - name: Install Avast Antivirus
   ansible.buitin.import_tasks:
     file: "install-{{ ansible_os_family }}.yml"
