@@ -19,7 +19,7 @@
 - name: Avast | Update the Avast Antivirus database for the first time
   ansible.builtin.command:
     cmd: "/usr/lib/avast/vpsupdate"
-    changed_when: false
+  changed_when: false
 
 - name: Avast | Installing license key
   ansible.builtin.copy:
