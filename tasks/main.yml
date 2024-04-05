@@ -11,5 +11,5 @@
     file: "{{ ansible_os_family }}.yml"
 
 - name: Install Avast Antivirus
-  ansible.buitin.import_tasks:
+  ansible.builtin.import_tasks:
     file: "install-{{ ansible_os_family }}.yml"
