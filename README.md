@@ -2,7 +2,7 @@
 
 This role can be used to install the Avast Antivirus for Linux. 
 
-Official ocumentation for Avast Antivirus for Linux is located here - https://repo.avcdn.net/linux-av/doc/avast-techdoc.pdf
+Official documentation for Avast Antivirus for Linux is located here - https://repo.avcdn.net/linux-av/doc/avast-techdoc.pdf
 
 
 ## Requirements
