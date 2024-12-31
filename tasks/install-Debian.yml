@@ -16,11 +16,6 @@
     update_cache: yes
     state: present
 
-- name: Avast | Update the Avast Antivirus database for the first time
-  ansible.builtin.command:
-    cmd: "/usr/lib/avast/vpsupdate"
-  changed_when: false
-
 - name: Avast | Installing license key
   ansible.builtin.copy:
     src: "{{ avast_license_file }}"
@@ -29,6 +24,11 @@
     group: root
   notify:
     - restart avast daemon
+
+- name: Avast | Update the Avast Antivirus database for the first time
+  ansible.builtin.command:
+    cmd: "/usr/lib/avast/vpsupdate"
+  changed_when: false
 
 - name: Avast | Configure the Avast Antivirus service
   ansible.builtin.service:

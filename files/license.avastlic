@@ -2,6 +2,14 @@
 
 # To create it, run this on a linux host that has the "avast-license" package installed:
 
-$ avastlic -v -o ./license.avastlic -c <YOUR-LICENSE-OR-WALLET-KEY>
-$ sudo cp ./license.avastlic /etc/avast/license.avastlic
+# $ avastlic -v -o ./license.avastlic -c <YOUR-LICENSE-OR-WALLET-KEY>
+# $ sudo cp ./license.avastlic <new location>
+
+# update the `avast_license_file` variable with <new location> in your inventory variables:
+# Example:
+
+# 
+# avast_license_file: <new location> 
+
+
 
