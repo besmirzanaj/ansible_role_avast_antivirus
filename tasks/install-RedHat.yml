@@ -6,12 +6,12 @@
     state: present
 
 - name: Avast | Install the Avast Antivirus RPM repository
-  ansible.builtin.yum_repository: 
+  ansible.builtin.yum_repository:
     name: Avast
     description: Avast Antivirus YUM repo
     file: avast
     baseurl: https://repo.avcdn.net/linux-av/rpm/el$releasever/release/
-    gpgcheck: yes
+    gpgcheck: true
 
 - name: Avast | Install the Avast Antivirus packages
   ansible.builtin.package:
@@ -25,7 +25,7 @@
     owner: "root"
     group: "root"
     mode: "0644"
-  notify: restart avast daemon
+  notify: Restart avast daemon
 
 - name: Avast | Update the Avast Antivirus database for the first time
   ansible.builtin.command:

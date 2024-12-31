@@ -2,7 +2,7 @@
 # tasks file for ansible_role_avast_antivirus
 
 - name: Avast | Checking licence file
-  fail:
+  ansible.builtin.fail:
     msg: "Please ensure that 'avast_license_file' is set in your host_vars or group_vars"
   when: avast_license_file is not defined
 

@@ -1,11 +1,12 @@
 galaxy_info:
+  role_name: my_name  # if absent directory name hosting role is used instead
+  namespace: besmirzanaj  # if absent, author is used instead
   author: "Besmir Zanaj"
   description: Ansible role to install Avast Antivirus in Linux
-  # issue_tracker_url: http://example.com/issue/tracker
+  issue_tracker_url: https://github.com/besmirzanaj/ansible_role_avast_antivirus/issues
+  license: MIT
 
-  license: license (GPL-2.0-or-later, MIT, etc)
-
-  min_ansible_version: " "
+  min_ansible_version: "2.9"
   platforms:
     - name: EL
       versions:
@@ -19,13 +20,12 @@ galaxy_info:
         - "bookworm" # Debian 12
     - name: Ubuntu
       versions:
-      - "bionic" # Ubuntu 18.04 LTS (Bionic Beaver)
-      - "focal" # Ubuntu 20.04 LTS (Focal Fossa)
-      - "jammy" # Ubuntu 22.04 LTS (Jammy Jellyfish)
+        - "bionic" # Ubuntu 18.04 LTS (Bionic Beaver)
+        - "focal" # Ubuntu 20.04 LTS (Focal Fossa)
+        - "jammy" # Ubuntu 22.04 LTS (Jammy Jellyfish)
 
-  galaxy_tags: 
+  galaxy_tags:
     - antivirus
     - avast
 
 dependencies: []
-

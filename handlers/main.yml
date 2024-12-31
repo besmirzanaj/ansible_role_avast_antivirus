@@ -1,7 +1,7 @@
 ---
 # handlers file for ansible_role_avast_antivirus
 
-- name: restart avast daemon
+- name: Restart avast daemon
   ansible.builtin.service:
     name: avast
     state: restarted
