@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: my_name  # if absent directory name hosting role is used instead
+  role_name: ansible_role_avast_antivirus  # if absent directory name hosting role is used instead
   namespace: besmirzanaj  # if absent, author is used instead
   author: "Besmir Zanaj"
   description: Ansible role to install Avast Antivirus in Linux
